@@ -6,3 +6,4 @@ android/local.properties
 scripts/test*.py
 android/gradle-7.5-bin.zip
 android/gradle-6.9-bin.zip
+backend/habr_archive.db
