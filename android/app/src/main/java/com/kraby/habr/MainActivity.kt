@@ -72,7 +72,7 @@ fun MainScreen() {
     // Load top daily initially
     LaunchedEffect(Unit) {
         isLoading = true
-        fetchData("http://10.0.2.2:8000/api/top?period=daily") { result, err ->
+        fetchData("http://165.227.156.190:8000/api/top?period=daily") { result, err ->
             isLoading = false
             if (err != null) errorMessage = err else articles = result
         }
@@ -94,7 +94,7 @@ fun MainScreen() {
             Button(onClick = {
                 scope.launch {
                     isLoading = true; errorMessage = null
-                    fetchData("http://10.0.2.2:8000/api/top?period=daily") { result, err ->
+                    fetchData("http://165.227.156.190:8000/api/top?period=daily") { result, err ->
                         isLoading = false
                         if (err != null) errorMessage = err else articles = result
                     }
@@ -104,7 +104,7 @@ fun MainScreen() {
             Button(onClick = {
                 scope.launch {
                     isLoading = true; errorMessage = null
-                    fetchData("http://10.0.2.2:8000/api/custom?start=2024-01-01&end=2024-03-01&sort=antitop") { result, err ->
+                    fetchData("http://165.227.156.190:8000/api/custom?start=2024-01-01&end=2024-03-01&sort=antitop") { result, err ->
                         isLoading = false
                         if (err != null) errorMessage = err else articles = result
                     }
